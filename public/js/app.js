@@ -63,6 +63,7 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 100);
 /******/ })
 /************************************************************************/
+<<<<<<< a0bc7f3772d85305e85e9ac3c6b0346babe3537d
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -58096,3 +58097,32 @@ module.exports = function (css) {
 
 /***/ })
 /******/ ]);
+=======
+/******/ ({
+
+/***/ 100:
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(101);
+module.exports = __webpack_require__(243);
+
+
+/***/ }),
+
+/***/ 101:
+/***/ (function(module, __webpack_exports__) {
+
+"use strict";
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/home/tran.ngoc.vinh/vim/php-hello/resources/assets/js/app.js'");
+
+/***/ }),
+
+/***/ 243:
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: ENOENT: no such file or directory, open '/home/tran.ngoc.vinh/vim/php-hello/resources/assets/sass/app.scss'\n    at runLoaders (/home/tran.ngoc.vinh/vim/php-hello/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /home/tran.ngoc.vinh/vim/php-hello/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /home/tran.ngoc.vinh/vim/php-hello/node_modules/loader-runner/lib/LoaderRunner.js:203:19\n    at /home/tran.ngoc.vinh/vim/php-hello/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:70:14\n    at process._tickCallback (internal/process/next_tick.js:61:11)");
+
+/***/ })
+
+/******/ });
+>>>>>>> config bootstrap
