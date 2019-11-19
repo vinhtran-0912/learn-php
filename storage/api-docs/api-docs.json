@@ -1,0 +1,14 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "CRM Swagger API",
+        "description": "CRM API description",
+        "version": "1.0.0"
+    },
+    "schemes": [
+        "https",
+        "http"
+    ],
+    "paths": {},
+    "definitions": {}
+}
