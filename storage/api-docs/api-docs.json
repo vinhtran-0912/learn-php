@@ -9,6 +9,96 @@
         "https",
         "http"
     ],
-    "paths": {},
-    "definitions": {}
+    "paths": {
+        "/api/v1/login": {
+            "post": {
+                "tags": [
+                    "Authorization"
+                ],
+                "summary": "Login",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string",
+                        "format": "email"
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "required": true,
+                        "type": "string",
+                        "format": "password"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Login successfully!",
+                        "examples": {
+                            "application/json": {
+                                "token_type": "Bearer",
+                                "expires_at": "01/01/1970 00:00:00",
+                                "access_token": "eyJ0eX.eyJhdWQ.CqlglC3",
+                                "refresh_token": "def50200e"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Authentication Error!",
+                        "schema": {
+                            "$ref": "#/definitions/AuthenticationError"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error!",
+                        "schema": {
+                            "$ref": "#/definitions/InternalServerError"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "InternalServerError": {
+            "description": "Internal server error!",
+            "required": [
+                "error_code",
+                "error_description"
+            ],
+            "properties": {
+                "error_code": {
+                    "type": "string",
+                    "example": "500"
+                },
+                "error_description": {
+                    "type": "string",
+                    "example": "Internal server error!"
+                }
+            }
+        },
+        "AuthenticationError": {
+            "required": [
+                "error_code",
+                "error_description"
+            ],
+            "properties": {
+                "error_code": {
+                    "type": "string",
+                    "example": "1002"
+                },
+                "error_description": {
+                    "type": "string",
+                    "example": "\u8a8d\u8a3c\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f\u3002\u8a8d\u8a3c\u60c5\u5831\u3092\u3054\u78ba\u8a8d\u304a\u9858\u3044\u3057\u307e\u3059\u3002"
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Authorization",
+            "description": "Authorization function"
+        }
+    ]
 }
